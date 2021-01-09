@@ -1,6 +1,6 @@
 import Container from '../common/Container';
-import { TabsPanelProps } from '../../types'
-import { ReactComponent as Fork } from '../../fork.svg'
+import { TabsPanelProps } from '../../utils/types';
+import { ReactComponent as Fork } from '../../assets/fork.svg';
 import {
   RepoItem,
   RepoInfo,
@@ -8,7 +8,7 @@ import {
   RepoActions,
   StarButton,
   SVGWrapper
-} from './styling'
+} from './styling';
 
 const TabsPanel = (props: TabsPanelProps) => {
   const { selectedTab, data, starredIds, handleStar } = props;

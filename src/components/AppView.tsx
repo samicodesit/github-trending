@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import Tabs from './AppTabs/index';
 
-import { RepoBody } from '../types';
+import { RepoBody } from '../utils/types';
 import { LOCALSTORAGE_KEY } from '../utils/constants';
 
 const AppView = ({ repos }: { repos: RepoBody[] | undefined }) => {

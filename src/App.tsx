@@ -6,7 +6,7 @@ import AppHeader from './components/AppHeader';
 import AppView from './components/AppView';
 
 import { initialParams } from './utils/schemas';
-import { RepoBody } from './types';
+import { RepoBody } from './utils/types';
 import useFetch from './api'
 
 function App() {

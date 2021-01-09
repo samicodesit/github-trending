@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from "react";
 
 import TabsPanel from './panel';
-import { TabsProps, TabID } from '../../types'
+import { TabsProps, TabID } from '../../utils/types'
 import { LOCALSTORAGE_KEY } from "../../utils/constants";
 import { appTabs } from "../../utils/schemas";
 
-import { TabsWrapper, TabsList, TabsItem, SubHeading } from './styling'
+import { TabsWrapper, TabsList, TabsItem, SubHeading } from './styling';
 
 const Tabs = (props: TabsProps) => {
   const { repos, starredRepos, updateStarred }  = props;

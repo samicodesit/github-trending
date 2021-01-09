@@ -1,17 +1,11 @@
 import styled from "styled-components";
 import Container from './common/Container';
 
-import AppLogo from '../logo.png'
+import AppLogo from '../assets/logo.png';
 
 const Header = styled.header`
   padding: 1rem 1.4rem;
   background-color: var(--gray);
-`;
-
-const MainHeading = styled.h1`
-  letter-spacing: 3px;
-  font-weight: 500;
-  text-transform: uppercase;
 `;
 
 const LogoWrapper = styled.div`

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { QueryParams, ResponseInterface } from "../types";
+import { QueryParams, ResponseInterface } from "../utils/types";
 import { API_URL } from "../utils/constants";
 
 export async function $fetch(params: QueryParams) {
