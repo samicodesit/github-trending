@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Container from './common/Container';
 
-import AppLogo from '../assets/logo.png';
+import AppLogo from '../assets/logo.jpeg';
 
 const Header = styled.header`
   padding: 1rem 1.4rem;
@@ -11,7 +11,7 @@ const Header = styled.header`
 const LogoWrapper = styled.div`
   margin-top: 10px;
   img {
-    max-width: 260px;
+    max-width: 100px;
   }
 
   h1 {
@@ -19,7 +19,8 @@ const LogoWrapper = styled.div`
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin-top: 6px;
+    margin-top: 20px;
+    margin-bottom: 12px;
   }
 `;
 
@@ -28,7 +29,7 @@ const AppHeader = () => {
     <Header>
       <Container>
         <LogoWrapper>
-          <img alt="mytheresa" src={AppLogo}></img>
+          <img alt="devyan" src={AppLogo}></img>
           <h1>Front-end Challenge</h1>
         </LogoWrapper>
       </Container>
