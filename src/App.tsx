@@ -1,25 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+
+import GlobalStyles from './components/common/GlobalStyles';
+import SpinnerLayout from './components/common/Spinner';
+import AppHeader from './components/AppHeader';
+import AppView from './components/AppView';
+
+import { initialParams } from './utils/schemas';
+import { RepoBody } from './types';
+import useFetch from './api'
 
 function App() {
+  const { response, isLoading, error } = useFetch(initialParams);
+  const [repos, setRepos] = useState<RepoBody[] | undefined>([]);
+
+  useEffect(() => {
+    setRepos(response?.items);
+  }, [response])
+
+  if (error) return <h2>{error?.message}</h2>
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <div className="App">
+        {
+          isLoading ? (
+            <SpinnerLayout />
+          ) : (
+            <>
+              <AppHeader/>
+              <AppView repos={repos} />
+            </>
+          )
+        }
+      </div>
+    </>
   );
 }
 
