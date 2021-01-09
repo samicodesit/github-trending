@@ -32,7 +32,6 @@ const Tabs = (props: TabsProps) => {
 
   const reposToRender = selectedTab === 'all' ? repos : starredRepos;
 
-  console.log(reposToRender)
   return (
     <>
       <TabsWrapper>
