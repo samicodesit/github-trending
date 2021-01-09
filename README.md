@@ -1,4 +1,18 @@
-#
+# Devyan - Front-end Coding Challenge
+
+This app features a listing of trending GitHub repos created last week.
+
+## Built with
+
+- Create React App
+- TypeScript
+- Styled Components
+- Mock Service Worker
+
+## Running the app
+
+- Launch a terminal window within this folder
+- Run `npm install && npm start`
 
 ## Available Scripts
 
